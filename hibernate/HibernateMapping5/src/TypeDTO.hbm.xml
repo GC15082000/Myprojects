@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.TypeDTO" table="Type">
+		<id name="tId">
+			<generator class="increment" />
+		</id>
+		<property name="tName" />
+		<property name="maxPlayer" />
+	</class>
+</hibernate-mapping>

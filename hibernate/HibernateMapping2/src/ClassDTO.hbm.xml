@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.ClassDTO" table="ClassDTOnew">
+
+		<id name="classNum">
+			<generator class="increment" />
+		</id>
+		<property name="numOfStudents" />
+
+		<list name="stu" cascade="all">
+			<key column="classNum"></key>
+			<index column="type"></index>
+			<one-to-many class="com.dto.StudentDTO" />
+		</list>
+	</class>
+
+
+
+</hibernate-mapping>

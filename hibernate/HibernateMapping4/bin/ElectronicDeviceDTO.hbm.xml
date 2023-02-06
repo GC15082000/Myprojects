@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.ElectronicDeviceDTO" table="ElectronicDevice">
+
+		<id name="eId">
+			<generator class="increment" />
+		</id>
+		<property name="eType" />
+
+		<set name="lp" cascade="all">
+			<key column="eId"></key>
+			<one-to-many class="com.dto.LaptopDTO" />
+		</set>
+	</class>
+	
+	
+
+</hibernate-mapping>

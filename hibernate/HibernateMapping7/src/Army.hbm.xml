@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.Army" table="Army">
+
+		<id name="aId">
+			<generator class="increment" />
+		</id>
+		<property name="numOfSoldiers" />
+
+		<set name="dt" cascade="all">
+			<key column="aId"></key>
+			<one-to-many class="com.dto.SoldierDetailsDTO" />
+		</set>
+	</class>
+
+
+
+</hibernate-mapping>

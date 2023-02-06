@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.SportsDTO" table="Sports">
+
+		<id name="sId">
+			<generator class="increment" />
+		</id>
+		<property name="sName" />
+
+		<list name="tp" cascade="all">
+			<key column="sId"></key>
+			<index column="type"></index>
+			<one-to-many class="com.dto.TypeDTO" />
+		</list>
+	</class>
+
+</hibernate-mapping>
