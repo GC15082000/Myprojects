@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.Division.Division" table="Division">
+
+		<id name="idDivision">
+			<generator class="increment" />
+		</id>
+		<many-to-one name="Circle_idCircle"
+			class="com.dto.Circle.Circle" cascade="all" />
+		<property name="name" />
+		<one-to-one name="Address_idAddress"
+			class="com.dto.Address.Address" cascade="all" />
+		<set name="role" cascade="all" table="division_has_role">
+			<key column="idDivision" />
+			<many-to-many class="com.dto.Role.Role"
+				column="role_idrole" />
+		</set>
+	</class>
+
+</hibernate-mapping>

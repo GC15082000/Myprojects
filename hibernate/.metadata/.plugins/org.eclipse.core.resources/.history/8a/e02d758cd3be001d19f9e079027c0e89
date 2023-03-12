@@ -1,0 +1,19 @@
+package com.practice.MethodRefrence;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//		WorkInterface workInterface=() ->{
+//			System.out.println("This WorkInterface");
+//		};
+//		
+//		workInterface.doWork();
+		
+		WorkInterface workInterface=MyStuff::doStuff;
+		
+		
+		
+	}
+
+}

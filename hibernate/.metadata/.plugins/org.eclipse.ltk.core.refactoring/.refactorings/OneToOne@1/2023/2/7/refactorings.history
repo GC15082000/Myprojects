@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.dto.Order&apos; to &apos;Order1&apos;&#x0D;&#x0A;- Original project: &apos;OneToOne@1&apos;&#x0D;&#x0A;- Original element: &apos;com.dto.Order&apos;&#x0D;&#x0A;- Renamed element: &apos;com.dto.Order1&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Order&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.dto{Order.java[Order" matchStrategy="1" name="Order1" qualified="false" references="true" similarDeclarations="false" stamp="1676622737467" textual="false" version="1.0"/>
+</session>

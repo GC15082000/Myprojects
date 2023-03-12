@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="employee" class="com.spring.Employee">
+		<property name="eNum" value="123" />
+
+		<property name="eName">
+			<list>
+				<value>Gaurav</value>
+				<value>Gaurav1</value>
+				<value>Gaurav2</value>
+				<null/>
+			</list>
+		</property>
+
+		<property name="eCity">
+			<map>
+				<entry key="GC1" value="GAURAV1" />
+				<entry key="GC2" value="GAURAV2" />
+			</map>
+		</property>
+
+		<property name="phNum">
+			<set>
+				<value>1234</value>
+				<value>12345</value>
+				<value>23145</value>
+			</set>
+		</property>
+	</bean>
+
+</beans>

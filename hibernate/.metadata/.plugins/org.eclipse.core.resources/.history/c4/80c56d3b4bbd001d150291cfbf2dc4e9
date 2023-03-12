@@ -1,0 +1,12 @@
+package com.practice;
+
+import com.practice.Override;
+
+public class MyIntern implements MyInternInterface{
+
+	@Override
+	public void sayHello() {
+		System.out.println("Say Hello");		
+	}
+ 
+}

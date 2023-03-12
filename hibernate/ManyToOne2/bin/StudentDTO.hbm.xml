@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.StudentDTO" table="st">
+
+		<id name="rollNo">
+		</id>
+		<property name="sName" />
+		<property name="sAddress" />
+		<many-to-one name="ClassDTO" class="com.dto.ClassDTO" cascade="all"/>
+
+	</class>
+
+</hibernate-mapping>

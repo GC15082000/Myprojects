@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.dto.Company.Company" table="company">
+
+		<id name="idCompany">
+			<generator class="increment" />
+		</id>
+		<property name="name" />
+		<property name="initials" />
+		<property name="contact" />
+		<one-to-one name="Address_idaddress" class="com.dto.Address.Address" cascade="all"/>
+		<set name="role" cascade="all" table="Company_has_role">
+			<key column="idCompany" />
+			<many-to-many class="com.dto.Role.Role" column="role_idrole"/>
+		</set>
+
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.TrainDTO" table="train">
+		<id name="tId">
+		</id>
+		<property name="tName" />
+
+		<set name="passenger" cascade="all" inverse="false"
+			table="Train_passenger">
+			<key column="tId" />
+			<many-to-many class="com.dto.PassengerDTO" column="pID" />
+		</set>
+	</class>
+
+</hibernate-mapping>

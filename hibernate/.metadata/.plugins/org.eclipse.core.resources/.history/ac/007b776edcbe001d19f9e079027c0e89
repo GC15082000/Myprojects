@@ -1,0 +1,17 @@
+package com.practice.ConstructorRefrence;
+
+public class Test {
+
+	public static void main(String[] args) {
+	
+//		Provider provider=() ->{
+//		return new Student();
+//		};
+		
+		Provider provider=Student :: new;
+		
+		Student stu=provider.getStudent();
+	    stu.display();
+	}
+
+}

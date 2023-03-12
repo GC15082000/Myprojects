@@ -1,0 +1,46 @@
+package com.dto;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
+public class Student {
+	@Id
+	private Integer sID;
+	private String sName;
+	private String sEmail;
+	private double sFees;
+
+	public Integer getsID() {
+		return sID;
+	}
+
+	public void setsID(Integer sID) {
+		this.sID = sID;
+	}
+
+	public String getsName() {
+		return sName;
+	}
+
+	public void setsName(String sName) {
+		this.sName = sName;
+	}
+
+	public String getsEmail() {
+		return sEmail;
+	}
+
+	public void setsEmail(String sEmail) {
+		this.sEmail = sEmail;
+	}
+
+	public double getsFees() {
+		return sFees;
+	}
+
+	public void setsFees(double sFees) {
+		this.sFees = sFees;
+	}
+
+}

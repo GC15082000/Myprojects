@@ -1,0 +1,5 @@
+1676024600531	Rename type 'Account'
+1676024624089	Rename type 'Employee'
+1676024653511	Rename resource 'Account.hbm.xml'
+1676024673930	Rename resource 'Employee.hbm.xml'
+1676025501597	Copy package

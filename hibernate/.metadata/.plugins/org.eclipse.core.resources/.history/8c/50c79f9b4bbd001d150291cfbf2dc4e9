@@ -1,0 +1,19 @@
+package com.practice.lamdaexpression;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+//         MyIntern myIntern = new MyIntern();
+//         myIntern.sayHello();
+		
+		MyInternInterface i=new MyInternInterface() {
+
+			@Override
+			public void sayHello() {
+				System.out.println(" Secong Say Hello");				
+			}			
+		};
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.dto;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.AnnotationConfiguration;
+
+public class Test {
+   public static void main (String[] args)
+   {
+   AnnotationConfiguration cfg=new AnnotationConfiguration().configure("com/dto/Hibernate.cfg.xml");
+   SessionFactory sf=cfg.buildSessionFactory();
+   Session s=sf.openSession();
+   Transaction tx=s.beginTransaction();
+   
+   Student st= new Student();
+   st.setsID(1);
+   st.setsName("Gaurav");
+   st.setsEmail("gc@gamil");
+   st.setsFees(1000);
+   
+ //  s.save(st);
+   tx.commit();
+   s.close();
+   }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="C:/jars/New folder/slf4j-api-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/jars/New folder/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/jars/New folder/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/jars/New folder/hibernate-core-3.6.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/jars/New folder/hibernate-commons-annotations-3.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="C:/jars/New folder/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/jars/New folder/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="C:/jars/New folder/antlr-2.7.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

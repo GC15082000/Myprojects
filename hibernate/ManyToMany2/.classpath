@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-18">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/hibernate-commons-annotations-3.2.0.Final.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/hibernate-core-3.5.6-Final.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/hibernate-jpa-2.0-api-1.0.0.Final.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/javassist-3.12.1.GA.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/jta-1.1.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/ojdbc6.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/slf4j-api-1.5.11.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/slf4j-nop-1.5.11.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/xml-apis-1.0.b2.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/antlr-2.7.6.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/commons-collections-3.1.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/dom4j-1.6.1.jar"/>
+	<classpathentry kind="lib" path="G:/jars/hibernatejars/hibernate-annotations-3.5.6-Final.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

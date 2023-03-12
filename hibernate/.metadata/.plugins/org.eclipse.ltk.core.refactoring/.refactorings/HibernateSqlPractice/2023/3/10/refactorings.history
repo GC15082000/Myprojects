@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;com.dto.Test&apos; to &apos;NamedQuery/src&apos;&#x0D;&#x0A;- Original project: &apos;HibernateSqlPractice&apos;&#x0D;&#x0A;- Destination element: &apos;NamedQuery/src&apos;&#x0D;&#x0A;- Original element: &apos;HibernateSqlPractice/src/com.dto.Test&apos;" description="Copy package" destination="=NamedQuery/src" element1="/src&lt;com.dto.Test" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1678382504642" version="1.0"/>
+</session>

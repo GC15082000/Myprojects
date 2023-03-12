@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.VotingMachineDTO" table="VotingMachine">
+		<id name="vMacNum">
+		</id>
+		<property name="vMacName" />
+		<set name="citizen" cascade="all" inverse="true">
+			<key column="vMacNum" />
+			<one-to-many class="com.dto.CitizenDTO" />
+		</set>
+	</class>
+
+</hibernate-mapping>

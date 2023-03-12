@@ -1,0 +1,6 @@
+package com.practice.ConstructorRefrence;
+
+@FunctionalInterface
+public interface WorkInterface {
+public abstract void doWork();
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.BankDTO" table="bankNew">
+		<id name="bankID">
+		</id>
+		<property name="bankIFSCCode" />
+		<property name="bankName" />
+
+		<set name="account" cascade="all" inverse="false"
+			table="Account_Bank">
+			<key column="bankID" />
+			<many-to-many class="com.dto.AccountDTO" column="accID" />
+		</set>
+	</class>
+
+</hibernate-mapping>

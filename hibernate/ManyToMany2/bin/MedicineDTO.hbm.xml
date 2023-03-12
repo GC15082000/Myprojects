@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.MedicineDTO" table="Medicine">
+		<id name="medID">
+		</id>
+		<property name="medName" />
+		<property name="dateManf" />
+		<set name="pharmaCompany" cascade="all"
+			table="PharmaCompany_Medicine">
+			<key column="medID" />
+			<many-to-many class="com.dto.PharmaCompanyDTO"
+				column="comID" />
+		</set>
+	</class>
+
+</hibernate-mapping>

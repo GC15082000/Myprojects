@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE hibernate-configuration PUBLIC
+	"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+
+	<session-factory>
+
+		<property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/marksheetmanagement</property>
+		<property name="connection.user">root</property>
+		<property name="connection.password">gaurav</property>
+		<property name="dialet">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">false</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<mapping class="com.dto.Aeronotical.Aeronotical" />
+		<mapping class="com.dto.CSE.CSEDTO" />
+		<mapping class="com.dto.Department.DepartmentDTO" />
+		<mapping class="com.dto.Electrical.ElectricalDTO" />
+		<mapping class="com.dto.HOD.HODDTO" />
+		<mapping class="com.dto.Mechanical.MechanicalDTO" />
+		<mapping class="com.dto.Parents.ParentsDTO" />
+		<mapping class="com.dto.principal.PrincipalDTO"/>
+		<mapping class="com.dto.Result.ResultDTO"/>
+		<mapping class="com.dto.Students.StudentsDTO"/>
+		<mapping class="com.dto.Teacher.TeacherDTO"/>
+		<mapping class="com.dto.User.UserDTO"/>
+		<mapping class="com.dto.Test.Test"/>
+		
+	</session-factory>
+</hibernate-configuration>

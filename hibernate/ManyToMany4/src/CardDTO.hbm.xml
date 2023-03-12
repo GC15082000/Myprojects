@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.CardDTO" table="Card">
+		<id name="cID">
+		</id>
+		<property name="cardName" />
+		<property name="cPurpose" />		
+		<set name="cit" cascade="all" table="Card_Citizen">
+			<key column="cID" />
+			<many-to-many class="com.dto.CitizenDTO" column="cVID"/>
+		</set>
+	</class>
+
+</hibernate-mapping>

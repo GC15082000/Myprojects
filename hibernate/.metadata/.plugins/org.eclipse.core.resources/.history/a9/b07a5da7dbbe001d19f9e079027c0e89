@@ -1,0 +1,15 @@
+package com.practice.ConstructorRefrence;
+
+public class Test {
+
+	public static void main(String[] args) {
+	
+		Provider provider=() ->{
+		return new Student();
+		};
+		
+		Student stu=provider.getStudent();
+	    stu.display();
+	}
+
+}

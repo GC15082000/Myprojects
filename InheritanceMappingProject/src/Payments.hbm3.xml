@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.PaymentsDTO" table="payments3">
+
+		<id name="paymentsID">
+		</id>
+		<property name="amount" />
+		<union-subclass name="com.dto.CreditCardDTO">
+			<property name="CreditCardType" />
+		</union-subclass>
+
+		<union-subclass name="com.dto.ChequeDTO">
+			<property name="ChequeType" />
+		</union-subclass>
+	</class>
+
+</hibernate-mapping>

@@ -1,0 +1,57 @@
+package com.dto;
+
+import java.util.HashSet;
+import java.util.Set;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.cfg.Configuration;
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Configuration cfg = new Configuration().configure("Hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory();
+		Session s = sf.openSession();
+		Transaction tx = s.beginTransaction();
+
+		BankDTO bank = new BankDTO();
+		bank.setBankID(1541);
+		bank.setBankIFSCCode("Xyz1541");
+		bank.setBankName("SBI");
+
+		BankDTO bank11 = new BankDTO();
+		bank11.setBankID(1541);
+		bank11.setBankIFSCCode("Xyz1541");
+		bank11.setBankName("SBI");
+
+		AccountDTO acc = new AccountDTO();
+		acc.setAccID(1);
+		acc.setAccType("ChildAccount");
+		acc.setAccHolderName("Gaurav");
+
+		AccountDTO acc1 = new AccountDTO();
+		acc1.setAccID(2);
+		acc1.setAccType("ChildAccount1");
+		acc1.setAccHolderName("Gaurav1");
+
+		// one to many
+		Set s1 = new HashSet();
+		s1.add(acc);
+		s1.add(acc1);
+
+		bank.setAccount(s1);
+		s.save(bank);
+
+		bank11.setAccount(s1);
+		s.save(bank11);
+
+		tx.commit();
+		s.close();
+		// sf.close();
+
+	}
+
+}

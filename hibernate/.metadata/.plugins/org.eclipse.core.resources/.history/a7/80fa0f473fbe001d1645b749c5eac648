@@ -1,0 +1,23 @@
+package com.practice.StreamAPI;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class MapAndFilterStreamAPI {
+	public static void main(String[] args) {
+		List<String>names=List.of("Gaurav","gaurav1");
+		List<String>newnames=names.stream().filter(e->e.startsWith("G")).collect(Collectors.toList());
+		System.out.println(newnames);
+		
+		List<Integer>Number=List.of(23,4,5,3,2,1);
+		List<Integer>newNumber=Number.stream().map(i->i*i).collect(Collectors.toList());
+		System.out.println(newNumber);
+		
+		//sorted
+		Number.stream().sorted().forEach(System.out::println);
+		
+		//min
+		Integer gc=Number.stream().min((x,y)->x.compareTo(y)).get();
+	   System.out.println(gc);
+	}
+}

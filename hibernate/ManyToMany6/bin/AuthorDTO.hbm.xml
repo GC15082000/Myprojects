@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.AuthorDTO" table="author">
+		<id name="aID">
+		</id>
+		<property name="aName" />
+
+		<set name="book" cascade="all" table="Author_Book">
+			<key column="aID" />
+			<many-to-many class="com.dto.BookDTO" column="bNum" />
+		</set>
+	</class>
+
+</hibernate-mapping>

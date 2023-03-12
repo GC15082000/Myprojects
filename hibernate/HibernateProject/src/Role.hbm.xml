@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.Role.Role" table="role">
+
+		<id name="idRole">
+			<generator class="increment" />
+		</id>
+		<property name="create" />
+		<property name="read" />
+		<property name="update" />
+		<property name="delete" />
+		<property name="execute" />
+		<property name="name" />
+		<property name="name_short" />
+
+		<set name="company" cascade="all" table="Company_has_role"
+			inverse="false">
+			<key column="idRole" />
+			<many-to-many class="com.dto.Company.Company"
+				column="Company_idComapny" />
+		</set>
+		
+		<set name="user" cascade="all" table="user_has_role"
+			inverse="false">
+			<key column="idRole" />
+			<many-to-many class="com.dto.User.User"
+				column="User_idUser" />
+		</set>
+		
+		<set name="region" cascade="all" table="region_has_role"
+			inverse="false">
+			<key column="idRole" />
+			<many-to-many class="com.dto.Region.Region"
+				column="Region_idRegion" />
+		</set>
+		
+		<set name="circle" cascade="all" table="Circle_has_role"
+			inverse="false">
+			<key column="idRole" />
+			<many-to-many class="com.dto.Circle.Circle"
+				column="Circle_idCircle" />
+		</set>
+		
+		<set name="division" cascade="all" table="division_has_role"
+			inverse="false">
+			<key column="idRole" />
+			<many-to-many class="com.dto.Division.Division"
+				column="Division_idDivision" />
+		</set>
+		
+		<set name="subdivision" cascade="all" table="subdivision_has_role"
+			inverse="false">
+			<key column="idRole" />
+			<many-to-many class="com.dto.SubDivision.SubDivision"
+				column="Company_idComapny" />
+		</set>
+		
+			<set name="distencentor" cascade="all" table="distcenter_has_role"
+			inverse="false">
+			<key column="idRole" />
+			<many-to-many class="com.dto.Distcenter_zone.Distencentor_zone"
+				column="DistCenter_idDistCenter" />
+		</set>
+		
+
+	</class>
+
+</hibernate-mapping>

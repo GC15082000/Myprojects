@@ -1,0 +1,40 @@
+package com.QueryLevelCache;
+
+import java.util.List;
+
+import org.hibernate.Query;
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.AnnotationConfiguration;
+
+
+public class Test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+     
+		AnnotationConfiguration cfg = new AnnotationConfiguration().configure("com/QueryLevelCache/Hibernate.cfg.xml");
+		SessionFactory sf = cfg.buildSessionFactory(); // Second level cache is created here and enabled manually in cfg
+	
+		Session s = sf.openSession(); 
+		Query q=s.createQuery("from Country");
+		q.setCacheable(true);
+		List l =q.list();
+		s.close();
+		
+		System.out.println("");
+		
+		Session s1 = sf.openSession();
+		Query q1=s1.createQuery("from Country");
+		//q1.setCacheable(true);
+		l =q1.list();
+		
+		s1.close();
+	
+	//	sf.close();
+		  // sessionfactory is close i.e Secondlevelcache is also closed 
+		
+		// Note :If you want to use again  first level cache then make another session 
+		}
+
+}

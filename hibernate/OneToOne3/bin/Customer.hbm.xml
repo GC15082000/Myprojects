@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.Customer" table="Cst">
+
+		<id name="cusID">
+			<generator class="foreign">
+				<param name="property">order1</param>
+			</generator>
+		</id>
+		<property name="cusName" />
+		<one-to-one name="order1" class="com.dto.Order1"
+			cascade="all" />
+
+	</class>
+
+</hibernate-mapping>

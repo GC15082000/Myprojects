@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.PersonDTO" table="Prsn">
+		<id name="pID">
+		</id>
+		<property name="pName" />
+		<property name="pCity" />
+		<set name="MovieTheatre" cascade="all" table="Movie_Person">
+			<key column="pID" />
+			<many-to-many class="com.dto.MovieTheatreDTO"
+				column="mNum" />
+		</set>
+	</class>
+
+</hibernate-mapping>

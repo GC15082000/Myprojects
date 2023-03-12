@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.Citizen" table="Ctzen">
+
+		<id name="citID">
+			<generator class="foreign">
+				<param name="property">voter</param>
+			</generator>
+		</id>
+		<property name="citName" />
+		<property name="citCity" />
+		<one-to-one name="voter" class="com.dto.VoterID"
+			cascade="all" />
+
+	</class>
+
+</hibernate-mapping>

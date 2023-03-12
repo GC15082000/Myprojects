@@ -1,0 +1,13 @@
+package com.practice.OptionalClass;
+
+public class OptionalClassExample {
+
+	public static void main(String[] args) {
+		String str="Gaurav";
+		if(str==null)
+			System.out.println("Null");
+		else
+		  System.out.println(str.length());
+	}
+
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dto.Student" table="student11" schema="FilterExample">
+
+		<id name="sID" />
+		<property name="sName" />
+		<property name="sAddress" />
+		<property name="sAge" />
+
+		<filter name="sName" condition="sName like 'g%'" />
+		<filter name="sAge" condition="sAge>=:sAge" />
+	</class>
+
+	<filter-def name="sName" />
+	<filter-def name="sAge">
+		<filter-param name="sAge" type="integer" />
+	</filter-def>
+
+</hibernate-mapping>
